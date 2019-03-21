@@ -12,6 +12,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("Quality updater tests")
 class QualityUpdaterTest {
 
+    private final QualityUpdater qualityUpdater = new QualityUpdater();
+
     @Test
     void updateTest() {
         List<Item> inputList = Arrays.asList(
@@ -28,7 +30,7 @@ class QualityUpdaterTest {
                 new ConjuredItem("Conjured Mana Cake", 2, 4)
         );
 
-        QualityUpdater.update(inputList);
+        qualityUpdater.update(inputList);
 
         assertEquals(inputList, expectedList);
 

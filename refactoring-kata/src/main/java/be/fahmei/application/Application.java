@@ -12,6 +12,8 @@ public class Application {
 
         ItemFactory factory = new ItemFactory();
 
+        QualityUpdater qualityUpdater = new QualityUpdater();
+
         List<Item> items = Arrays.asList(
                 factory.getItem("+5 Dexterity Vest", 10, 20),
                 factory.getItem("Aged Brie", 2, 0),
@@ -33,7 +35,7 @@ public class Application {
                 System.out.println(item);
             }
             System.out.println();
-            QualityUpdater.update(items);
+            qualityUpdater.update(items);
         }
 
     }
